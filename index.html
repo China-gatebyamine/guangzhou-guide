@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل أسواق قوانغتشو</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f7;--card:#fff;--ink:#12263a;--mute:#5d6f80;--line:#d5dee5;--red:#b5271f;--jade:#1f7a6d;--chip:#e4ebf0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a26;--card:#16283a;--ink:#e8eef3;--mute:#9db0c0;--line:#2a4056;--red:#ff7b6f;--jade:#5fd0bf;--chip:#1f3448}}
+:root[data-theme="dark"]{--bg:#0e1a26;--card:#16283a;--ink:#e8eef3;--mute:#9db0c0;--line:#2a4056;--red:#ff7b6f;--jade:#5fd0bf;--chip:#1f3448}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo','DejaVu Sans',sans-serif;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{padding:22px 16px 8px;max-width:760px;margin:0 auto}
+h1{font-size:28px;font-weight:800;margin:0}
+h1 span{font-family:'Noto Sans SC',sans-serif;color:var(--red);font-weight:700;margin-inline-start:10px;font-size:20px}
+header p{margin:4px 0 0;color:var(--mute);font-size:14px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 16px 10px;border-bottom:1px solid var(--line)}
+.in{max-width:760px;margin:0 auto}
+input[type=search]{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit;font-size:16px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px}
+.chip{flex:none;border:1px solid var(--line);background:var(--chip);color:var(--ink);padding:5px 12px;border-radius:99px;font:inherit;font-size:13px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding:6px 16px 60px}
+h2{font-size:17px;margin:26px 0 10px;padding-inline-start:10px;border-inline-start:5px solid var(--red)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 14px;margin-bottom:10px}
+.t{font-weight:600;font-size:15px}
+.z{font-family:'Noto Sans SC','DejaVu Sans',sans-serif;direction:ltr;text-align:left;font-size:15px;margin:3px 0;word-break:break-all;user-select:all}
+.act{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.btn{border:1px solid var(--line);background:transparent;color:var(--ink);padding:5px 11px;border-radius:6px;font:inherit;font-size:13px;cursor:pointer;text-decoration:none}
+.btn.go2{background:var(--jade);color:#fff;border-color:var(--jade)}
+.en{direction:ltr;text-align:left;font-size:13px;color:var(--mute);font-family:'Noto Sans SC','Cairo',sans-serif}
+.mt{font-size:13px;color:var(--jade);margin-top:4px;font-weight:600}
+.h2e{display:block;direction:ltr;text-align:left;font-size:12px;font-weight:400;color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:4px}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:12px}
+summary{font-weight:600;cursor:pointer}
+details ol{margin:8px 0 0;padding-inline-start:20px;font-size:14px}
+.btn.go{background:var(--red);color:#fff;border-color:var(--red)}
+.btn.on{color:var(--red);border-color:var(--red)}
+.btn:focus-visible,.chip:focus-visible,input:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.empty{text-align:center;color:var(--mute);padding:40px 0}
+#ov{position:fixed;inset:0;background:#fff;color:#111;z-index:50;display:none;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 18px) 20px 20px;overflow:auto}
+#ov.show{display:flex}
+#ov .h{font-family:'Noto Sans SC',sans-serif;font-size:22px;color:#b5271f;font-weight:700;margin-bottom:6px}
+#ov .s{color:#555;font-size:13px;margin-bottom:16px}
+#ov .big{font-family:'Noto Sans SC','DejaVu Sans',sans-serif;direction:ltr;text-align:left;font-size:30px;line-height:1.5;font-weight:700;margin:0 0 14px}
+#ov .btn{align-self:flex-start;margin-top:auto;color:#111;border-color:#999}
+#toast{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:7px 16px;border-radius:99px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60}
+#toast.show{opacity:1}
+
+.hero{background:linear-gradient(160deg,#0b2e3a,#14485a 70%);color:#fff;padding:calc(env(safe-area-inset-top,0px) + 34px) 0 30px;max-width:none}
+.hero .in{padding:0 20px}
+.eyebrow{font-family:'Noto Sans SC','Cairo',sans-serif;direction:ltr;color:#ffb4a8;font-size:13px;letter-spacing:.5px;margin-bottom:8px}
+.hero h1{font-size:clamp(26px,6vw,40px);line-height:1.35;font-weight:800;margin:0 0 12px}
+.lead{font-size:16px;color:#d4e6ec;margin:0 0 18px;max-width:560px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn.big{padding:11px 22px;font-size:16px;border-radius:8px}
+.btn.ghost{color:#fff;border-color:#7fa8b6}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px}
+.stats div{font-size:13px;color:#b9d3dc}.stats b{display:block;font-size:26px;color:#fff;line-height:1.2}
+.sec{padding:24px 0}.sec.alt{background:var(--chip)}
+.sec h3{margin:0 0 12px;font-size:19px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.g{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;text-align:right;cursor:pointer;font:inherit;color:var(--ink)}
+.g:hover{border-color:var(--red)}.g:focus-visible{outline:3px solid var(--jade);outline-offset:2px}
+.g i{font-style:normal;font-size:24px;display:block}
+.g strong{display:block;font-size:14px;line-height:1.4;margin:4px 0 2px}
+.g span{font-size:12px;color:var(--mute)}
+.steps{display:grid;gap:10px}
+.stp{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px}
+.stp b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center}
+.stp span{font-size:15px}
+.sec details{margin-top:12px}
+.foot{padding:22px 16px 40px;text-align:center;color:var(--mute);font-size:12px;max-width:760px;margin:0 auto}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.hero,.sec{display:none}}
+@media print{.bar,.act,#toast{display:none}body::before{display:none}.card{break-inside:avoid}body{background:#fff}}
+</style></head><body>
+<header class="hero"><div class="in">
+<div class="eyebrow">广州市场指南 · Guangzhou Market Guide</div>
+<h1>دليلك إلى أسواق الجملة في قوانغتشو</h1>
+<p class="lead">عناوين صينية جاهزة للعرض على السائق، وأسماء إنجليزية، ومحطات المترو، وزر يفتح الموقع في Amap. كل ما تحتاجه في مكان واحد وعلى جوالك.</p>
+<div class="cta"><a class="btn go big" href="#dir">ابدأ البحث</a><button class="btn big ghost" id="share">شارك الدليل</button></div>
+<div class="stats" id="stats"></div></div></header>
+<section class="sec"><div class="in"><h3>تصفح حسب القسم</h3><div class="grid" id="grid"></div></div></section>
+<section class="sec alt"><div class="in"><h3>كيف تستخدمه في ثلاث خطوات</h3><div class="steps">
+<div class="stp"><b>1</b><span>ابحث عن السوق بالعربية أو الإنجليزية أو الصينية، أو افتح قسمًا.</span></div>
+<div class="stp"><b>2</b><span>اضغط «اعرضه للسائق» ليظهر العنوان بالصينية بخط كبير، أو «فتح في Amap» لتصل بنفسك.</span></div>
+<div class="stp"><b>3</b><span>احفظ الأسواق التي ستزورها في «المفضلة»، أو انظر قسم «حسب المترو» لتجمع أكثر من سوق في جولة واحدة.</span></div></div><details><summary>كيف أصل إلى السوق عبر تطبيق Amap (高德地图)</summary><ol>
+<li>نزّل تطبيق <b>Amap</b> (باسم 高德地图 في المتجر)، وغيّر لغته إلى الإنجليزية من الإعدادات إن وُجد الخيار.</li>
+<li>في هذا الكتيب اضغط <b>فتح في Amap</b> تحت السوق، فيفتح التطبيق على العنوان إن كان مثبتًا، وإلا يفتح صفحة الخريطة.</li>
+<li>إن لم يفتح، اضغط <b>نسخ</b> ثم الصق العنوان الصيني في خانة البحث داخل Amap.</li>
+<li>اختر المكان من النتائج ثم اضغط <b>路线</b> (المسار)، وبدّل بين مترو وحافلة وسيارة ومشي.</li>
+<li>للتاكسي اضغط <b>打车</b> داخل التطبيق، وقد يطلب منك ربط وسيلة دفع (مثل Alipay). وإن لم يتيسر فاعرض العنوان للسائق بزر «اعرضه للسائق».</li>
+<li>قد تحتاج إنترنتًا أو شريحة صينية أو eSIM ليعمل التطبيق جيدًا، ويفضّل تنزيل خريطة قوانغتشو للعمل بدون إنترنت من داخل التطبيق.</li></ol></details></div></section>
+<div class="bar" id="dir"><div class="in">
+<input type="search" id="q" placeholder="ابحث بالعربية أو الإنجليزية أو الصينية: أحذية، shoes، 鞋城" aria-label="بحث">
+<div class="chips" id="chips"></div></div></div>
+<main id="list"></main>
+<div id="ov" role="dialog" aria-modal="true"><div class="h">请带我去这里</div><div class="s">من فضلك خذني إلى هذا العنوان</div><div id="ovb"></div><button class="btn" id="cl">إغلاق</button></div>
+<div class="foot">الأسماء الإنجليزية ومحطات المترو للمساعدة فقط، والعناوين منقولة من قائمة وصلتني وقد تتغير. تأكد من المكان في Amap قبل الذهاب.</div>
+<div id="toast"></div>
+<script>
+const D=[{"t": "الأسواق الرئيسية (ابدأ من هنا)", "te": "Main markets", "i": [{"a": "سوق ملابس نسائي ورجالي", "z": ["白马服装批发市场"], "e": "Baima Clothing Market", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 0]}, {"a": "سوق ملابس نسائي ورجالي", "z": ["流花服装批发市场"], "e": "Liuhua Clothing Market", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 0]}, {"a": "سوق البنطلونات وملابس الجينز", "z": ["牛仔服装市场"], "e": "Jeans (Denim) Clothing Market"}, {"a": "سوق ملابس نسائي شعبي", "z": ["沙河服装批发市场"], "e": "Shahe Clothing Market", "m": ["6", "沙河顶", "Shaheding", 0]}, {"a": "سوق ملابس الأطفال ومستلزمات الأم", "z": ["中山八路妇幼服装城"], "e": "Zhongshan 8th Road Women & Children's Clothing City"}, {"a": "سوق الأحذية الراقية", "z": ["站西路鞋城"], "e": "Zhanxi Road Shoe City", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 1]}, {"a": "سوق الأحذية الشعبية", "z": ["大新路鞋类市场"], "e": "Daxin / Jiefang South Road Shoe Market"}, {"a": "سوق الأقمشة", "z": ["中大布料市场"], "e": "Zhongda Fabric Market (Zhongda International Textile City)", "m": ["8", "中大", "Zhongda (Sun Yat-sen Univ.)", 0]}, {"a": "سوق الأكسسوارات", "z": ["泰康路精品批发广场"], "e": "Taikang Road Boutique Wholesale Plaza"}, {"a": "سوق الأكسسوارات الثانية", "z": ["北京路仰忠街玩具文具市场"], "e": "Beijing Road Yangzhong Street Toy & Stationery Market"}, {"a": "سوق الأكسسوارات الثالثة", "z": ["解放南路万菱广场"], "e": "Wanling Plaza (Jiefang South Road)"}, {"a": "سوق الحقائب والجلديات", "z": ["三元里东升皮具和新兴皮具城"], "e": "Sanyuanli Dongsheng & Xinxing Leather City", "m": ["2", "三元里", "Sanyuanli", 0]}, {"a": "سوق الحقائب والجلديات الثانية", "z": ["三元里皮具手带批发城"], "e": "Sanyuanli Leather & Handbag Wholesale City", "m": ["2", "三元里", "Sanyuanli", 0]}, {"a": "سوق المكياج والتجميل والعطور", "z": ["机场路兴发广场化妆品市场"], "e": "Xingfa Plaza Cosmetics Market (Jichang Road)", "m": ["2", "三元里", "Sanyuanli", 1]}, {"a": "سوق النظارات", "z": ["人民中路南方眼镜城"], "e": "Nanfang Glasses City (Renmin Middle Road)"}, {"a": "سوق الهدايا والتحف", "z": ["一德路玩具文具总汇"], "e": "Yide Road Toy & Stationery Wholesale", "m": ["6", "一德路", "Yide Lu", 0]}, {"a": "سوق القرطاسية", "z": ["黄沙大道谊国文具批发中心"], "e": "Yiyuan Stationery Wholesale Center (Huangsha Avenue)"}, {"a": "سوق الساعات", "z": ["站西路钟表城"], "e": "Zhanxi Road Watch City", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 1]}, {"a": "سوق الكمبيوتر", "z": ["天河电脑城、南方电脑城"], "e": "Tianhe Computer City / Southern Computer City", "m": ["1 و3", "体育西路", "Tiyu Xilu", 1]}, {"a": "سوق الإلكترونيات", "z": ["大沙头海印电器市场"], "e": "Haiyin Electrical Appliances Market (Dashatou)", "m": ["6", "大沙头", "Dashatou", 1]}, {"a": "سوق مواد البناء", "z": ["南岸路建材市场"], "e": "Nan'an Road Building Materials Market"}, {"a": "سوق الأواني المنزلية وأدوات البناء", "z": ["落溪南天五金商业城"], "e": "Luoxi Nantian Hardware City"}, {"a": "سوق زينة السيارات", "z": ["永福路汽车用品城"], "e": "Yongfu Road Auto Accessories City"}, {"a": "سوق الأثاث في شونده", "z": ["顺德乐从家具中心"], "e": "Lecong Furniture Center (Shunde)"}]}, {"t": "المساجد والمعارض والمواصلات", "te": "Mosques, fairs & transport", "i": [{"a": "المسجد الجامع الكبير القديم", "z": ["光塔路56号怀圣寺"], "e": "Huaisheng Mosque (Guangta Road)", "m": ["1", "西门口", "Ximenkou", 1]}, {"a": "مسجد قرب المعرض القديم", "z": ["解放北路清真先贤古墓"], "e": "Xianxian Mosque & Muslim Saint's Tomb"}, {"a": "المطار", "z": ["白云国际机场"], "e": "Baiyun International Airport", "m": ["3", "机场南", "Airport South", 1]}, {"a": "محطة القطار", "z": ["广州火车站"], "e": "Guangzhou Railway Station", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 0]}, {"a": "محطة القطار الشرقية", "z": ["广州火车东站"], "e": "Guangzhou East Railway Station", "m": ["1 و3", "广州东站", "Guangzhou East Station", 0]}, {"a": "محطة الباصات إلى هونغ كونغ", "z": ["广园客运站"], "e": "Guangyuan Bus Station (to Hong Kong)"}, {"a": "المعرض الجديد الكبير", "z": ["琶洲交易会"], "e": "Canton Fair Complex (Pazhou)", "m": ["8", "琶洲", "Pazhou", 0]}, {"a": "المعرض القديم", "z": ["流花交易会"], "e": "Old Canton Fair Complex (Liuhua)", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 1]}, {"a": "شارع بكين للمشاة", "z": ["北京路步行街"], "e": "Beijing Road Pedestrian Street", "m": ["6", "北京路", "Beijing Lu", 1]}, {"a": "بقالة العرب", "z": ["富丽半岛花园阿拉伯便利店"], "e": "Arab Grocery (Fuli Peninsula Garden)"}, {"a": "شارع تسوق مشاة (الأسواق والمطاعم)", "z": ["上下九步行街"], "e": "Shangxiajiu Pedestrian Street", "m": ["1", "长寿路", "Changshou Lu", 1]}]}, {"t": "الملابس والمصانع والأقمشة", "te": "Clothing, factories & fabrics", "i": [{"a": "مصانع ومعامل الملابس – ملابس أطفال", "z": ["荔湾区中山八路23号 富力商贸大厦808室"], "e": "Children's clothing factories"}, {"a": "معامل", "z": ["广州市白云区棠溪岗贝路24号楼之一首层101"], "e": "Factories"}, {"a": "سوق مصانع الملابس", "z": ["粤江服饰：二社四横路6号3楼，依莱服饰在2楼，蓝天服饰在他们旁边的那个楼，丽姿服饰在瑞宝六社19栋2"], "e": "Garment factories"}, {"a": "معامل خياطة", "z": ["广州市海珠区瑞宝二社四横路6号3楼"], "e": "Sewing workshops"}, {"a": "سوق الأقمشة", "z": ["广州中大国际轻纺城首层E1130", "海印布料批发市场"], "e": "Zhongda Fabric Market (Zhongda International Textile City)", "m": ["8", "中大", "Zhongda (Sun Yat-sen Univ.)", 0]}, {"a": "سوق الستائر", "z": ["布料批发：海印布料总汇……地址：海珠区沿江东路429号"], "e": "Curtain market"}, {"a": "مصنع إكسسوارات ستائر – قوانغتشو", "z": ["广州市捷佳装饰材料有限公司", "地址：广州市番禺区石基镇茶东村东兴工业区二横西路之四"], "e": "Curtain accessories factory"}, {"a": "سوق فساتين الأعراس", "z": ["广州市倾情坊婚纱礼服设计公司", "地址：广州市南洲路后潜南工业区七栋12号（工厂）", "广州市江南大道北25号之四（店）"], "e": "Wedding dress market"}, {"a": "سوق ملابس رجالي ونسائي / باي ما", "z": ["白马服装市场"], "e": "Baima Clothing Market", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 0]}, {"a": "سوق ملابس رجالي ونسائي / ليوخوا", "z": ["流花服装市场"], "e": "Liuhua Clothing Market", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 0]}, {"a": "سوق البنطلونات", "z": ["牛仔服装市场"], "e": "Jeans (Denim) Clothing Market"}, {"a": "سوق ملابس شعبي", "z": ["沙河服装市场"], "e": "Shahe Clothing Market", "m": ["6", "沙河顶", "Shaheding", 0]}, {"a": "سوق ملابس أطفال ومستلزمات الأم", "z": ["中山八路妇幼服装城"], "e": "Zhongshan 8th Road Women & Children's Clothing City"}, {"a": "سحابات – دانتل – خرز", "z": ["广州宏业花边行", "地址：广州市中大配料城B区109档"], "e": "Zippers, lace & beads"}, {"a": "محل لعمل النيبلات والشعارات والعلامات التجارية", "z": ["顺达服饰商标辅料", "地址：广州市越秀区环市西路135号万通商业街22档"], "e": "Labels, logos & trademarks shop"}, {"a": "سوق ملابس أطفال / تسوق شخصي", "z": ["上下九广场'下九路7号码二楼", "时尚基", "妇儿公司下九路29~31号", "http://tuhama.longluntan.com/"], "e": "Children's clothing / personal shopping"}, {"a": "سوق الشي سان هانغ للملابس (نسائي، من أشهر أسواق الجملة)", "z": ["十三行服装批发市场", "荔湾区十三行路"], "n": "أشهر مبانيه: 新中国大厦 و 红遍天大厦. يقفل السوق غالبًا بعد الثالثة عصرًا، فاذهب صباحًا.", "e": "Shisanhang Clothing Wholesale Market (Thirteen Hongs)", "m": ["1 و6", "文化公园", "Cultural Park", 0]}, {"a": "المبنى الأكبر في سوق الشي سان هانغ", "z": ["新中国大厦", "十三行路"], "n": "الطوابق الأولى للقطعة والقطع القليلة، والأعلى للجملة.", "e": "New China Building (Shisanhang)", "m": ["1 و6", "文化公园", "Cultural Park", 0]}, {"a": "مبنى فيه جينز ماركات في الدور السفلي", "z": ["红遍天大厦", "十三行路"], "e": "Hongbiantian Building (Shisanhang)", "m": ["1 و6", "文化公园", "Cultural Park", 0]}, {"a": "سوق ملابس الأطفال في شاهي (الأرخص، بضاعة شعبية)", "z": ["沙河大街童装城", "地址：沙河大街与广州大道中交界处（白云区医院对面）"], "e": "Shahe Street Children's Clothing City", "m": ["6", "沙河顶", "Shaheding", 1]}, {"a": "سوق ألعاب وبضائع أطفال (بضاعة تصدير وبواقي)", "z": ["卓荣外贸儿童百货批发城", "地址：广州市中山八路新虹街38-40号（中山八路公交总站旁）"], "e": "Zhuorong Export Children's Goods Wholesale City"}, {"a": "سوق ملابس رجالي متوسط إلى راقٍ في شاهي", "z": ["银马国际服装城"], "e": "Yinma International Clothing City (Shahe)"}, {"a": "سوق ملابس نسائية تصدير (أفريقيا والشرق الأوسط)", "z": ["御龙外贸服装城"], "n": "يبعد نحو 2 كم عن محطة القطار.", "e": "Yulong Export Fashion Plaza"}, {"a": "سوق ملابس تصدير (قرب محطة القطار)", "z": ["金宝外贸服装城"], "n": "من الأسواق المشهورة بالتصاميم المقلَّدة للماركات.", "e": "Kinbo Export Fashion City"}, {"a": "سوق ملابس تصدير (قرب محطة القطار)", "z": ["金美外贸服装城"], "e": "Kinme Export Fashion City"}, {"a": "سوق ملابس تصدير (قرب محطة القطار)", "z": ["金都国际服装城"], "e": "Kindo International Fashion City"}, {"a": "سوق ملابس جملة قرب محطة القطار", "z": ["天马服装市场"], "n": "اسمه الصيني من ذاكرتي، تأكد منه في Amap.", "e": "Tianma Clothing Market"}]}, {"t": "الأحذية والحقائب والجلديات", "te": "Shoes, bags & leather", "i": [{"a": "أسواق الأحذية", "z": ["广州市环市西路91号天富西城鞋业广场2D6-D8档，圣杰鞋业", "广州市环市西路95号天富荔珊前座A102档"], "e": "Shoe markets"}, {"a": "سوق الأحذية الراقية", "z": ["国际鞋城（省汽车站旁）"], "e": "International Shoe City"}, {"a": "سوق الأحذية الشعبية", "z": ["高第街'服装'解放南路鞋类批发市"], "e": "Daxin / Jiefang South Road Shoe Market"}, {"a": "شنط وجلديات – قوانغتشو", "z": ["广州市利迪亚皮具有限公司", "地址：广州市花都区狮岭镇岭南工业园二街10号"], "e": "Bags & leather (Guangzhou)"}, {"a": "الحقائب والجلديات – سوق آخر", "z": ["东升皮具城和新兴皮具城", "东升皮具城", "三元里皮具手袋批发城"], "e": "Sanyuanli Dongsheng & Xinxing Leather City", "m": ["2", "三元里", "Sanyuanli", 0]}, {"a": "سوق آخر", "z": ["站西路金宝服装城负一楼E100档 （玲）"], "e": "Another market"}, {"a": "سوق آخر", "z": ["地址：广州市白云皮具城2A203档"], "e": "Another market"}]}, {"t": "الإلكترونيات والكمبيوتر والجوالات", "te": "Electronics & computers", "i": [{"a": "سوق مدينة شنجن", "z": ["深圳-赛格", "地址：深圳深南中路赛格广场5楼5929 IP：287"], "e": "Shenzhen electronics market (SEG)"}, {"a": "سوق شنجن", "z": ["深圳市宏业数码科技有限公司", "地址：深圳市华强北中电（万商汇）1360室（店）", "深圳市华强北电子科技大厦C室13L1室"], "e": "Shenzhen market"}, {"a": "سوق الإلكترونيات – قوانغتشو", "z": ["大沙头", "地址：广州市大沙头四马路海印电器总汇二场B310档"], "e": "Haiyin Electrical Appliances Market (Dashatou)", "m": ["6", "大沙头", "Dashatou", 1]}, {"a": "سوق الكمبيوتر وإكسسوارات الحاسوب", "z": ["广州市天河区頣高数码广场302档"], "e": "Computer & accessories market"}, {"a": "سوق آخر", "z": ["广州东源计算机科技有限公司", "地址：广州市天河路490号颐高数码广场215室"], "e": "Another market"}, {"a": "سوق إكسسوارات الجوال والآيباد وكاميرات المراقبة / سوق الكمبيوتر", "z": ["南方大厦（手机配件）", "达利聖电子科技", "地址：广州市西堤二马路新文园国际数码四楼041（店）"], "e": "Phone, iPad & CCTV accessories / computer market (Nanfang Building)"}, {"a": "شواحن سيارات", "z": ["地址：广州市西堤二马路55号新亚洲国际电子数码城14楼27室（13A27）"], "e": "Car chargers"}]}, {"t": "الإكسسوارات والهدايا والألعاب والقرطاسية", "te": "Accessories, gifts & stationery", "i": [{"a": "سوق الإكسسوارات 1", "z": ["北京路仰忠街（玩具 文具）"], "e": "Beijing Road Yangzhong Street Toy & Stationery Market"}, {"a": "سوق الإكسسوارات 2", "z": ["泰康路精品批发广场"], "e": "Taikang Road Boutique Wholesale Plaza"}, {"a": "سوق الإكسسوارات النسائي", "z": ["广州市站前路西郊大厦A座三楼3205档", "Guǎngzhōu shì zhàn qián lù xī jiāo dàshà yīzuò sān lóu 320 5 dàng", "广州市站前路西路兴华国际饰品城二楼2010档（西郊大厦对面）"], "e": "Women's accessories market"}, {"a": "سوق الهدايا والتحف", "z": ["中国浙江金华市孝顺镇低田工业区东山街"], "e": "Gifts & souvenirs market"}, {"a": "الدمى", "z": ["廣州總店地址:廣州市一德西路410號國際玩具城1B9"], "e": "Toys & dolls"}, {"a": "سوق الهدايا والتحف", "z": ["广州市海珠区解放南路39号万菱广场3A104档", "一德东路玩具文具总汇"], "e": "Wanling Plaza (Jiefang South Road)"}, {"a": "سوق القرطاسية", "z": ["谊园文具批发中心（黄沙大道）"], "e": "Yiyuan Stationery Wholesale Center (Huangsha Avenue)"}, {"a": "الأجندات والأقلام", "z": ["广州市越秀区一德中路313号新谊园66档"], "e": "Notebooks & pens"}, {"a": "سوق ألعاب وإكسسوارات وعلاقيات وأكياس", "z": ["广州市一德西路410號國際玩具城1B9"], "e": "Toys, accessories, hangers & bags market"}, {"a": "سوق الألعاب والقرطاسية", "z": ["一德西路国际精品批发市场"], "e": "Toys & stationery market"}, {"a": "سوق الألعاب والأباجورات والتحف", "z": ["广州市越秀区解放南路39号万菱广场5楼B区009铺（店）"], "e": "Wanling Plaza (Jiefang South Road)"}]}, {"t": "الرخام والسيراميك ومواد البناء والديكور", "te": "Marble, building materials & decor", "i": [{"a": "أسواق الرخام والسيراميك – فوشان", "z": ["佛山市爱歌装饰材料有限公司", "展厅地址：广州省佛山市禅城区宝塔路9号（中国马赛克城A104）"], "e": "Marble & ceramics market (Foshan)"}, {"a": "سوق الرخام – قوانغتشو", "z": ["广州荔湾区南岸路塘前新街金翔商业街5-6档"], "e": "Marble market (Guangzhou)"}, {"a": "مصنع الرخام (حجم كبير) – قوانغتشو", "z": ["石材：广州市白云区广花一路大郎方向夏茅石材市场"], "e": "Marble factory (large scale)"}, {"a": "سوق مواد البناء والبويات والبراويز", "z": ["佛山市天尚装饰画有限公司", "地址：广东顺德乐从国际家私325国道边皇朝家私摩登店后面（新隆牌坊往广州方向120米右侧）"], "e": "Building materials, paint & frames market"}, {"a": "إكسسوارات البناء", "z": ["建材市场（南岸路30号"], "e": "Building accessories"}, {"a": "سوق أدوات البناء وأدوات المطاعم والبطانيات والنجف", "z": ["南天五金商业城（洛溪大桥西）"], "e": "Luoxi Nantian Hardware City"}, {"a": "سوق إكسسوارات الديكور", "z": ["装饰材料灯饰布艺市场：主要在南岸路 大南路 泰康路", "1.南岸装饰材料市场……南岸路33号坐车：34路 71路 176路 209路 270路 256路", "2.南岸路30号", "3.大南路117号", "4.大南路59号"], "e": "Decor accessories market"}]}, {"t": "الأثاث والسيارات", "te": "Furniture & cars", "i": [{"a": "سوق الأثاث – شونده", "z": ["乐琪源 鸿祚（森）家具厂", "地址：广东省佛山市顺德区乐从镇沙潜居委会南村大闸工业区（工厂）", "广东省佛山市顺德区乐从镇国际家私城南华三排D座5前仓"], "e": "Furniture market (Shunde)"}, {"a": "محل مفروشات – شندا", "z": ["雅兰实业(深圳)有限公司 乐从专卖店/", "地址：佛山市顺德区乐从325国道皇朝天桥往乐从方向300米"], "e": "Furnishings shop (Shunde)"}, {"a": "سوق الأثاث – قوانغتشو", "z": ["广东顺德红阳家具", "地址：广东顺德水腾（工厂）", "广州市西槎路同德家私城C1—3档"], "e": "Furniture market (Guangzhou)"}, {"a": "سوق قطع غيار السيارات", "z": ["广州市添钜汽车配件有限公司", "地址：广州市广园东路金鸡岭3号大门东面"], "e": "Auto parts market"}, {"a": "محل زينة السيارات", "z": ["广州市越秀区永福路79号倚云广场A105-106"], "e": "Car accessories shop"}]}, {"t": "التجميل والعطور والحلاقة والنظارات والساعات والطبية والشاي", "te": "Beauty, hair, eyewear, watches, medical, tea & more", "i": [{"a": "سوق العطور وأدوات التجميل", "z": ["机场路兴发广场（化妆品市场）", "ملاحظة: هذا سوق الجملة. سوق كراسي المساج: 机场路，化妆产品"], "e": "Xingfa Plaza Cosmetics Market (Jichang Road)", "m": ["2", "三元里", "Sanyuanli", 1]}, {"a": "سوق مستلزمات الحلاقة", "z": ["美发工具：1.广州市长寿路的长寿东路美容美发用品专业商市", "地址：长寿东路下坐车82路 2路 2路夜 3路 3路夜 6路 9路夜 209"], "e": "Hair & beauty supplies market"}, {"a": "سوق باروكات الشعر", "z": ["广州市荔湾区长寿东路318号(坚记对面)"], "e": "Wig market"}, {"a": "سوق الساعات", "z": ["广州市站西路九龙钟表城C3009档"], "e": "Zhanxi Road Watch City", "m": ["2 و5", "广州火车站", "Guangzhou Railway Station", 1]}, {"a": "سوق النظارات", "z": ["眼镜批发市场：1.越和国际眼镜批发城……广州市人民路322号", "2.广州眼镜城……广州市越秀区人民中路260号", "3.广州信江眼镜贸易中心……广州市人民中路250号", "4.南方眼睛批发市场……人民中路317号", "5.广东（国际）眼镜贸易中心……广州市光复中路313号", "6.广州信江眼镜贸易中心……站西群英路3号"], "e": "Eyewear market"}, {"a": "سوق المستلزمات الطبية", "z": ["医疗器械批发市场：", "广州市医药公司批发中心", "主营：医疗器械批发业务", "地址：大同路103号", "公交车站名：珠玑路 和平西 297路 夜33路 61路 6路 530路 夜5路 82路 176路", "广州国览医疗器械城！地址：芳村花地湾，花湾路650号。乘坐地铁一号线花地湾A出口下步行200米左右", "主营：医疗器械批发业务", "地址：和平西路138号", "公交车站名：和平西路站", "公交线路车：3路 6 路 61路 66路 530路"], "e": "Medical equipment market"}, {"a": "سوق جملة الشاي", "z": ["品源香茶业有限公司", "地址：广州市白云区石槎路88号期亿国际茶叶批发城A2-14(总店)", "广州市花都区新华街大华二路金满城A区9街31-32"], "e": "Wholesale tea market"}, {"a": "سوق مستحضرات التجميل", "z": ["广州美博城"], "e": "Guangzhou Beauty Expo City"}, {"a": "سوق الأسماك والمأكولات المجففة", "z": ["黄沙水产干货市场"], "e": "Huangsha Seafood & Dried Goods Market"}, {"a": "سوق الزهور", "z": ["广州岭南花卉市场"], "e": "Lingnan Flower Market", "m": ["5", "滘口", "Jiaokou", 0]}, {"a": "سوق الأعشاب والأدوية الصينية", "z": ["广州市清平中药材专业市场"], "e": "Qingping Traditional Chinese Medicine Market"}, {"a": "سوق الشاي", "z": ["南方茶叶市场"], "e": "Nanfang Tea Market"}]}, {"t": "أسواق قريبة خارج قوانغتشو", "te": "Nearby cities (Shenzhen, Dongguan, Zengcheng, Huadu)", "i": [{"a": "سوق الإلكترونيات الأشهر في شنجن", "z": ["深圳华强北电子市场"], "n": "في شنجن، وتصل إليها بالقطار السريع من قوانغتشو نحو ساعة.", "e": "Huaqiangbei Electronics Market (Shenzhen)", "m": ["1", "华强路", "Huaqiang Rd (Shenzhen Metro)", 1]}, {"a": "سوق ملابس في هومن (دونغقوان)", "z": ["虎门服装城"], "n": "مدينة هومن تبعد نحو ساعة بالسيارة، وتشتهر بالملابس النسائية. تأكد من اسم السوق قبل الذهاب.", "e": "Humen Clothing Market (Dongguan)"}, {"a": "مدينة الجينز (زنغتشنغ)", "z": ["新塘牛仔服装城"], "n": "شنتانغ تشتهر بالجينز بكميات كبيرة وأسعار المصنع. تأكد من اسم السوق قبل الذهاب.", "e": "Xintang Jeans Town (Zengcheng)"}, {"a": "مدينة الجلديات والحقائب (هوادو)", "z": ["花都狮岭皮具城"], "n": "أسعار المصانع هناك أقل من أسواق سان يوان لي بحسب المصادر.", "e": "Shiling Leather City (Huadu)"}]}];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let favs=new Set();
+try{favs=new Set(JSON.parse(localStorage.getItem('gz-favs')||'[]'))}catch(e){}
+const save=()=>{try{localStorage.setItem('gz-favs',JSON.stringify([...favs]))}catch(e){}};
+let cat='all';
+const cats=[{id:'all',t:'الكل'},{id:'fav',t:'المفضلة'},{id:'metro',t:'🚇 حسب المترو'},...D.map((c,i)=>({id:String(i),t:c.t}))];
+function chips(){$('#chips').innerHTML=cats.map(c=>`<button class="chip" data-c="${c.id}" aria-pressed="${c.id===cat}">${esc(c.t)}</button>`).join('')}
+function cityOf(s){return /深圳/.test(s)?'深圳':/虎门/.test(s)?'东莞':/佛山|顺德|乐从/.test(s)?'佛山':'广州'}
+function addr(it){const a=it.z.find(l=>l.startsWith('地址'));return (a||it.z[0]).replace(/^地址[：:]/,'').replace(/^\d\./,'')}
+function card(it,id){
+  return `<div class="card"><div class="t">${esc(it.a)}</div>${it.e?`<div class="en">${esc(it.e)}</div>`:''}${it.z.map(l=>`<div class="z">${esc(l)}</div>`).join('')}${it.m?`<div class="mt">🚇 الخط ${esc(it.m[0])} — محطة ${esc(it.m[2])} (${esc(it.m[1])})${it.m[3]?' · تقريبي، تأكد في Amap':''}</div>`:''}${it.n?`<div class="note">${esc(it.n)}</div>`:''}
+  <div class="act"><button class="btn go" data-a="show" data-id="${id}">اعرضه للسائق</button>
+  <a class="btn go2" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(addr(it))}&city=${cityOf(addr(it))}&callnative=1">فتح في Amap</a>
+  <button class="btn" data-a="copy" data-id="${id}">نسخ</button>
+  <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr(it))}">الخريطة</a>
+  <button class="btn ${favs.has(id)?'on':''}" data-a="fav" data-id="${id}">${favs.has(id)?'★ في المفضلة':'☆ حفظ'}</button></div></div>`}
+function render(){
+  const q=$('#q').value.trim().toLowerCase();let out='',n=0;
+  const ok=(it,id)=>{if(cat==='fav'&&!favs.has(id))return false;return !q||(it.a+' '+(it.e||'')+' '+it.z.join(' ')+' '+(it.m?it.m.join(' '):'')).toLowerCase().includes(q)};
+  if(cat==='metro'){
+    const g={};
+    D.forEach((c,ci)=>c.i.forEach((it,ii)=>{const id=ci+'-'+ii;if(it.m&&ok(it,id)){const k='الخط '+it.m[0]+' — '+it.m[2]+' ('+it.m[1]+')';(g[k]=g[k]||[]).push([it,id])}}));
+    Object.keys(g).sort().forEach(k=>{out+=`<h2>${esc(k)}</h2>`;g[k].forEach(([it,id])=>{n++;out+=card(it,id)})});
+    if(n)out='<div class="note">الأسواق التي عرفتُ لها محطة قريبة فقط. اختر السوق ثم افتحه في Amap لتتأكد من المخرج.</div>'+out;
+  }else D.forEach((c,ci)=>{
+    if(cat!=='all'&&cat!=='fav'&&cat!==String(ci))return;
+    const rows=c.i.map((it,ii)=>[it,ci+'-'+ii]).filter(([it,id])=>ok(it,id));
+    if(!rows.length)return;
+    out+=`<h2>${esc(c.t)}<span class="h2e">${esc(c.te||'')}</span></h2>`;
+    rows.forEach(([it,id])=>{n++;out+=card(it,id)});
+  });
+  $('#list').innerHTML=n?out:'<div class="empty">لا توجد نتائج. جرّب كلمة أخرى أو اختر «الكل».</div>';
+}
+const get=id=>{const [c,i]=id.split('-');return D[c].i[i]};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+document.addEventListener('click',e=>{
+  const ch=e.target.closest('.chip');if(ch){cat=ch.dataset.c;chips();render();return}
+  const b=e.target.closest('[data-a]');if(!b)return;
+  const id=b.dataset.id,it=get(id),a=b.dataset.a;
+  if(a==='copy'){const t=it.z.join('\n');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast('تم نسخ العنوان')).catch(()=>toast('تعذّر النسخ، اضغط مطولًا على النص'))}
+  if(a==='fav'){favs.has(id)?favs.delete(id):favs.add(id);save();render()}
+  if(a==='show'){$('#ovb').innerHTML=`<p class="big" style="font-size:20px;color:#b5271f">${esc(it.a)}</p>`+it.z.map(l=>`<p class="big">${esc(l)}</p>`).join('');$('#ov').classList.add('show')}
+});
+$('#cl').onclick=()=>$('#ov').classList.remove('show');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#ov').classList.remove('show')});
+$('#q').addEventListener('input',render);
+chips();render();
+const IC=['⭐','🕌','👗','👜','💻','🎁','🧱','🛋️','💄','🚆'];
+$('#grid').innerHTML=D.map((c,i)=>`<button class="g" data-g="${i}"><i>${IC[i]||'🏬'}</i><strong>${esc(c.t)}</strong><span>${c.i.length} موقعًا</span></button>`).join('');
+const nI=D.reduce((a,c)=>a+c.i.length,0),nM=D.reduce((a,c)=>a+c.i.filter(i=>i.m).length,0);
+$('#stats').innerHTML=`<div><b>${nI}</b>موقعًا</div><div><b>${D.length}</b>أقسام</div><div><b>${nM}</b>بمحطة مترو</div><div><b>3</b>لغات</div>`;
+document.addEventListener('click',e=>{const g=e.target.closest('[data-g]');if(!g)return;cat=g.dataset.g;chips();render();$('#dir').scrollIntoView()});
+$('#share').onclick=()=>{const u=location.href;if(navigator.share){navigator.share({title:document.title,url:u}).catch(()=>{})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(()=>toast('تم نسخ الرابط')).catch(()=>toast('انسخ الرابط من شريط المتصفح'))}else toast('انسخ الرابط من شريط المتصفح')};
+</script></body></html>
