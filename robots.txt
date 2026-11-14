@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://china-gatebyamine.github.io/guangzhou-guide/sitemap.xml
